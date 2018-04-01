@@ -65,7 +65,7 @@ export default class Nav extends Component{
                                 <li><Button to="/onlinecourses" className="menu__link"><i className="fa fa-graduation-cap small"></i>Online-Courses</Button></li>
                             </div>
                             <div className="divide"></div>
-                            <li><a href="#" className="menu__link"><i className="fa fa-user-times"></i>Log out</a></li>
+                            <li><Button to="/" className="menu__link"><i className="fa fa-user-times"></i>Log out</Button></li>
                         </Fragment>
                         :
                         <Fragment>
