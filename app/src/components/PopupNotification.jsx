@@ -6,15 +6,18 @@ export default class PopupNotification extends Component{
     componentDidMount(){
             var notifyElement = $(".popup").addClass('active');
             $('.popup').prepend(notifyElement);
-            setTimeout(function (ele) {
+            setTimeout(function () {
                 $(".popup").removeClass('active');
-            }, 3000, notifyElement);
+            }, 5000);
+            setTimeout(function () {
+                $(".popup").hide();
+            }, 5500);
     }
     render(){
     return(
         <div className="popup">
             <i className="fa fa-exclamation-circle "></i>
-            <span className="popup_title">You must be logged in!</span>
+            <span className="popup_title">{this.props.title}</span>
         </div>
     )
 }

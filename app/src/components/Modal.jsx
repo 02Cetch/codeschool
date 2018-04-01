@@ -1,5 +1,7 @@
 import React, {Fragment, Component} from 'react';
 
+import PopupNotification from './PopupNotification';
+
 export default class Modal extends Component{ // чтобы использовать Модальное окно, нужно добавить в ссылку href="#openModal"
     constructor(props){
         super(props);
@@ -31,7 +33,7 @@ export default class Modal extends Component{ // чтобы использова
                             {
                                 this.state.success
                                 ?
-                                    <p className="success">Success!</p>
+                                    <PopupNotification title="Success!"/>
                                 :
                                 ''
                             }     

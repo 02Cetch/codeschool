@@ -14,7 +14,7 @@ export default function Home(props){
     return(
         <Fragment>
             <Nav onLogin={props.onLogin} img='logo'/>
-            <PopupNotification/>
+            <PopupNotification title="You must be logged in!"/>
             <Header isHomePage={true} img={headBg} icon={logo} bgColor="000"/>
             <MainContent/>
             <Preloader/>  
