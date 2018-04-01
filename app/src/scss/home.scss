@@ -195,3 +195,28 @@ section.s{
         }
     }
 }
+.success{
+    color: green !important;
+    padding-top: 20px;
+    float: right;
+}
+.popup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 50px;
+    bottom: -100px;
+    width: 200px;
+    height: 60px;
+    background: rgba($accent_semiDark, .8);
+    color: #fff;
+    transition: bottom .5s ease;
+    &.active{
+        bottom: 10px;
+        transition: bottom .5s ease;
+    }
+    i.fa{
+        font-size: 20px;
+    }
+}
