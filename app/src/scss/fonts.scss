@@ -1,0 +1,7 @@
+@import "mixins/font-face";
+
+@include font-face("BebasNeue", "../fonts/BebasNeue-Regular/BebasNeue-Regular");
+@include font-face("BebasNeue", "../fonts/BebasNeue-Thin/BebasNeue-Thin", 100);
+@include font-face("BebasNeue", "../fonts/BebasNeue-Light/BebasNeue-Light", 200);
+@include font-face("BebasNeue", "../fonts/BebasNeue-Book/BebasNeue-Book", 300);
+@include font-face("BebasNeue", "../fonts/BebasNeue-Bold/BebasNeue-Bold", 800);

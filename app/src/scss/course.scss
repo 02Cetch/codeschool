@@ -1,0 +1,47 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+.wrapper {
+    min-height: 100vh;
+    margin:60px auto;
+    width: 100%;
+    h1 {
+        width: 100%;
+        border-radius:5px 5px 0 0;
+        margin:10px 0 0 0;
+        color:#FFFFF7;
+        font-size:20px;
+        padding:5px;
+        text-align:center;
+        transition: opacity .5s;
+            &:hover {
+                transition: opacity .5s;
+                cursor:pointer;
+                opacity: .9;
+            }
+       }
+      article {
+        width: 100%;
+        background:#FFFFF7;
+        border-radius:0 0 5px 5px;
+        padding: 5px;
+        color: #60646D;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+            iframe{
+                margin: 20px auto;
+                width: 100%    !important;
+                height: 500px !important;
+                video{
+                    width: 100%    !important;
+                    height: 500px !important;
+                }
+            }
+            .descr{
+                margin-top: 20px;
+                font-size: 15px;
+                color: $accent_dark;
+            }
+      }
+  }

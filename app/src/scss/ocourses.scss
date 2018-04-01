@@ -1,0 +1,146 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+
+header.courses{
+    i.fa{
+        font-size: 100px;
+        color: #fff;
+    }
+    .title{
+        margin: auto;
+        width: 800px;
+        .h1{
+            font-size: 50px;
+            font-family: BebasNeue, serif;
+        }
+        .p{
+            font-family: BebasNeue;
+            font-weight: 100;
+            font-size: 35px;
+            color: #ffffff;
+        }
+    }
+}
+section.s{
+    &-ocourses{
+        width: 100%;
+        min-height: 160vh;
+        margin-bottom: 50vh;
+        .course{
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .course__item{
+            background: #f7f5f5;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            .course__logo{
+                min-height: 270px;
+                width: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .img{
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            .course__title{
+                font-family: Roboto, serif;
+                margin-left: 10px;
+                width: 100%;
+                height: 350px;
+                .h3{
+                    margin-top: 10px;
+                    font-size: 30px;
+                }
+                .p{
+                    margin-top: 10%;
+                    font-size: 17px;
+                }
+                .info{
+                    i.fa{
+                        font-size: 20px;
+                        margin-right: 10px;
+                    }
+                    p{
+                        padding-top: 10px;
+                        font-size: 20px;
+                    }
+                }
+                .wrapper{
+                    margin-top: 30px;
+                    width: 100%;
+                    .button{
+                        float: right;
+                        font-size: 15px;
+                        margin: .5em;
+                        padding: .2em 1em;
+                    }
+                }
+            }
+        }
+    }
+    &-learning{
+        padding-top: 25vh;
+        .learning__item{
+            text-align: center;
+            min-height: 200px;
+            font-family: Roboto, serif;
+            .fa{
+                font-size: 40px;
+                margin-bottom: 30px;
+            }
+            .h3{
+                font-size: 30px;
+            }
+        }
+    }
+}
+.twitch__state{
+    padding-top: 150px;
+    display: flex;
+    width: 50%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    .twitch_img{
+        width: 130px;
+        height: 100%;
+        border-radius: 50%;
+    }
+    .title{
+        width: 50%;
+        text-align: center;
+        font-family: Roboto, serif;
+        text-transform: uppercase;
+        .stream_title{
+            width: auto;
+        }
+        .stream_name{
+            margin: auto;
+            max-width: 100%;
+            font-size: 30px;
+            color: black;
+            &:hover{
+                color: black;
+                opacity: .8;
+            }
+        }
+        .stream_views{
+            i.fa{
+                color: rgb(29, 95, 29);
+            }
+        }
+    }
+    .status{
+        &-online{
+            color: green;
+        }
+        &-offline{
+            color: red
+        }
+    }
+}
