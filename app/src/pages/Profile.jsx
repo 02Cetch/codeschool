@@ -2,7 +2,6 @@ import React, {Fragment} from 'react';
 
 import Header from '../components/Header';
 import Nav from '../components/Nav';
-import Footer from '../components/Footer';
 import BasicAccountInfo from '../components/BasicAccountInfo'
 import Preloader from '../components/Preloader';
 
@@ -28,7 +27,6 @@ export default function Profile(props){
                 </div>
             </div>
             <Preloader/>
-            <Footer/>
         </Fragment>
     );
 }

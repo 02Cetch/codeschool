@@ -2,7 +2,6 @@ import React, {Fragment, Component} from 'react';
 
 import Nav from '../components/Nav'
 import Header from '../components/Header';
-import Footer from '../components/Footer';
 import Course from '../components/Course';
 import Preloader from '../components/Preloader';
 
@@ -32,7 +31,6 @@ export default class OnlineCourse extends Component{
                 <SectionLearning
                     twitchOperatorName={item.twitchOperatorName}
                     bgColor={item.color}/>
-                <Footer/>
                 <Preloader/>
             </Fragment>
         )

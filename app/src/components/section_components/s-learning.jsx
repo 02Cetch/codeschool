@@ -9,7 +9,7 @@ export default class Learning extends Component{
         this.state={
             status: 'OFFLINE',
             icon: 'http://dummyimage.com/50x50/ecf0e7/5c5457.jpg&text=0x3F',
-            game: '',
+            game: 'nostream',
             viewers: 0,
             result: ''
         };

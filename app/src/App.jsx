@@ -7,6 +7,8 @@ import VideoCourses from './pages/VideoCoursesPage';
 import Profile from './pages/Profile';
 import VideoCourse from './pages/VideoCourse'
 
+import Footer from './components/Footer';
+
 import {Route, Switch} from 'react-router-dom';
 
 function App(){
@@ -20,6 +22,7 @@ function App(){
             <Route exact path="/onlinecourses/course/:id" render={props => (<OnlineCourse {...props}  />)} />
             <Route exact path="/videocourses/course/:id" render={props => (<VideoCourse {...props}  />)} />
           </Switch>
+          <Footer/>
       </div>
     );
   }
