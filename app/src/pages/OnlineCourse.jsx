@@ -21,13 +21,13 @@ export default function OnlineCourse(props){
             <Header 
                 headerIcon="graduation-cap"
                 className="courses"
-                headerTitle={OnlineCourses[0].title+" Course"}
-                headerDescr={OnlineCourses[0].descr}
+                headerTitle={OnlineCourses[this.props.match.params].title+" Course"}
+                headerDescr={OnlineCourses[this.props.match.params].descr}
                 isHomePage={false} 
-                bgColor={OnlineCourses[0].color}/>
+                bgColor={OnlineCourses[this.props.match.params].color}/>
             <SectionLearning
-                twitchOperatorName={OnlineCourses[0].twitchOperatorName}
-                bgColor={OnlineCourses[0].color}/>
+                twitchOperatorName={OnlineCourses[this.props.match.params].twitchOperatorName}
+                bgColor={OnlineCourses[this.props.match.params].color}/>
             <Footer/>
             <Preloader/>
         </Fragment>

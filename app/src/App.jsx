@@ -7,12 +7,19 @@ import VideoCourses from './pages/VideoCoursesPage';
 import Profile from './pages/Profile';
 import VideoCourse from './pages/VideoCourse'
 
-// import {Route, Switch} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 
 function App(){
     return (
       <div className="App">
-          <OnlineCourse/>
+          <Switch>
+            <Route path="/" component={Home} />
+            <Route path="/onlinecourses" component={OnlineCourses} />
+            <Route path="/videocourses" component={VideoCourses} />
+            <Route path="/profile" component={Profile} />
+            <Route exact path="/onlinecourses/course/:id" render={props => (<OnlineCourse {...props}  />)} />
+            <Route exact path="/videocourses/course/:id" render={props => (<VideoCourse {...props}  />)} />
+          </Switch>
       </div>
     );
   }
