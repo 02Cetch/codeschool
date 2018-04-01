@@ -5,23 +5,21 @@ import Nav from '../components/Nav';
 import BasicAccountInfo from '../components/BasicAccountInfo'
 import Preloader from '../components/Preloader';
 
-import userInfo from '../api/user';
-
 export default function Profile(props){
 
     return(
         <Fragment>
             <Nav
-                img={userInfo.icon}
-                userData={userInfo}/>
+                img={props.data.icon}
+                userData={props.data}/>
             <Header
-                userAvatar={userInfo.icon}
-                headerTitle={userInfo.name}/>
+                userAvatar={props.data.icon}
+                headerTitle={props.data.name}/>
             <div className="container" id="to">
                 <div className="row">
                     <div className="col-md-12">
                         <section className="s-info">
-                            <BasicAccountInfo user={userInfo}/>
+                            <BasicAccountInfo user={props.data}/>
                         </section>
                     </div>
                 </div>

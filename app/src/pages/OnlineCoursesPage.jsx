@@ -5,7 +5,6 @@ import Header from '../components/Header';
 import Course from '../components/Course';
 import Preloader from '../components/Preloader';
 
-import OnlineCoursesDB from '../api/onlineCoursesDB';
 
 import userInfo from '../api/user';
 
@@ -25,7 +24,7 @@ export default function OnlineCoursesPage(props){
                 <section className="s-ocourses" id="to">
                     <div className="col-md-8 col-md-offset-2">
                         {
-                            OnlineCoursesDB.map( course=>
+                            props.data.map( course=>
                                 <Course 
                                     coursePath="onlinecourses"
                                     id={course.id}

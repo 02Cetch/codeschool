@@ -5,7 +5,6 @@ import Header from '../components/Header';
 import Course from '../components/Course';
 import Preloader from '../components/Preloader';
 
-import videoCoursesDB from '../api/videoCoursesDB';
 
 import userInfo from '../api/user';
 
@@ -25,7 +24,7 @@ export default function VideoCoursesPage(props){
                 <section className="s-vcourses" id="to">
                     <div className="container">
                         {
-                            videoCoursesDB.map( course=>
+                            props.data.map( course=>
                                 <div className="col-md-6 col-sm-12" key={course.id}>
                                     <Course 
                                         id={course.id}
