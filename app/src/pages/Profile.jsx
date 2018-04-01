@@ -10,6 +10,7 @@ export default function Profile(props){
     return(
         <Fragment>
             <Nav
+                onLogout={props.onLogout}
                 img={props.data.icon}
                 userData={props.data}/>
             <Header

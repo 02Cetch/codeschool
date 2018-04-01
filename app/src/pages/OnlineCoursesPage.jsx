@@ -12,6 +12,7 @@ export default function OnlineCoursesPage(props){
     return(
         <Fragment>
             <Nav 
+                onLogout={props.onLogout}
                 img={userInfo.icon}
                 userData={userInfo}/>
             <Header 

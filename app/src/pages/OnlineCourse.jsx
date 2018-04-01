@@ -16,9 +16,11 @@ export default class OnlineCourse extends Component{
     render(){
         var {id} = this.props.match.params;
         var item = OnlineCourses[id-1]
+        console.log(this.props.onLogout)
         return(
             <Fragment>
                 <Nav 
+                    onLogout={this.props.onLogout}
                     img={userInfo.icon}
                     userData={userInfo}/>
                 <Header 

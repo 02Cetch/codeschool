@@ -19,6 +19,7 @@ export default class VideoCourse extends Component{
         return(
             <Fragment>
                 <Nav 
+                    onLogout={this.props.onLogout}
                     img={userInfo.icon}
                     userData={userInfo}/>
                 <Header 

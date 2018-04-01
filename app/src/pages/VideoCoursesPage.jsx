@@ -12,6 +12,7 @@ export default function VideoCoursesPage(props){
     return(
         <Fragment>
             <Nav 
+                onLogout={props.onLogout}
                 img={userInfo.icon}
                 userData={userInfo}/>
             <Header 

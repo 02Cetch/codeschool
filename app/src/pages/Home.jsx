@@ -12,7 +12,7 @@ export default function Home(props){
     const logo = "logo"
     return(
         <Fragment>
-            <Nav img='logo'/>
+            <Nav onLogin={props.onLogin} img='logo'/>
             <Header isHomePage={true} img={headBg} icon={logo} bgColor="000"/>
             <MainContent/>
             <Preloader/>  

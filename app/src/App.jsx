@@ -15,7 +15,7 @@ import videoCoursesDB from './api/videoCoursesDB';
 import userInfo from './api/user';
 // END DATABASES
 
-//import Nav from './components/Nav';
+import PrivateRoute from './components/PrivateRoutes';
 import Footer from './components/Footer';
 
 import {Route, Switch} from 'react-router-dom';
@@ -32,17 +32,18 @@ class App extends Component{
   }
   logout = () =>{
     this.setState({user: null})
+    console.log('logouted')
   }
   render(){
       return (
         <div className="App">
             <Switch>
               <Route exact path="/" render={props => (<Home onLogin={this.login} {...props}/>)} />
-              <Route exact path="/onlinecourses" render={props => (<OnlineCourses data={OnlineCoursesDB} {...props} />)} />
-              <Route exact path="/videocourses" render={props => (<VideoCourses data={videoCoursesDB} {...props} />)} />
-              <Route exact path="/profile" render={props => (<Profile data={userInfo} {...props} />)} />
-              <Route exact path="/onlinecourses/course/:id" render={props => (<OnlineCourse {...props}  />)} />
-              <Route exact path="/videocourses/course/:id" render={props => (<VideoCourse {...props}  />)} />
+              <PrivateRoute exact path="/onlinecourses" onLogout={this.logout}  data={OnlineCoursesDB} user={this.state.user}  component={OnlineCourses} />
+              <PrivateRoute exact path="/videocourses"  onLogout={this.logout}  data={videoCoursesDB}  user={this.state.user}  component={VideoCourses}/>
+              <PrivateRoute exact path="/profile"       onLogout={this.logout}  data={userInfo}        user={this.state.user}  component={Profile} />
+              <PrivateRoute exact path="/onlinecourses/course/:id" onLogout={this.logout} user={this.state.user}  component={OnlineCourse} />
+              <PrivateRoute exact path="/videocourses/course/:id"  onLogout={this.logout} user={this.state.user}  component={VideoCourse} />
             </Switch>
             <Footer/>
         </div>

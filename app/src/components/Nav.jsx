@@ -55,9 +55,6 @@ export default class Nav extends Component{
                 </div>
                 <div className={`aside__content${this.state.active ? " active" : ''}`}>
                     <ul className="menu">
-                    {
-                        user
-                        ?
                         <Fragment>
                             <div className="mnu__links">
                                 <li><Button to="/profile" className="menu__link"><i className="fa fa-user-o"></i>Profile</Button></li>
@@ -65,23 +62,20 @@ export default class Nav extends Component{
                                 <li><Button to="/onlinecourses" className="menu__link"><i className="fa fa-graduation-cap small"></i>Online-Courses</Button></li>
                             </div>
                             <div className="divide"></div>
-                            <li><Button to="/" className="menu__link"><i className="fa fa-user-times"></i>Log out</Button></li>
+                            {
+                                user
+                                ?
+                                <li><Button onLogout={this.props.onLogout} to="/" className="menu__link"><i className="fa fa-user-times"></i>Log out</Button></li>
+                                :
+                                <Fragment>
+                                    <div className="entry">
+                                        <li><a href="#openModal" className="menu__link"><i className="fa fa-user-plus"></i>Sign up</a></li>
+                                        <li><a href="#openModal" className="menu__link"><i className="fa fa-user"></i>Sign in</a></li>
+                                    </div>
+                                    <Modal onLogin={this.props.onLogin} title="Authorization"/>
+                                </Fragment>
+                            }
                         </Fragment>
-                        :
-                        <Fragment>
-                            <div className="mnu__links">
-                                <li><a href="#" className="menu__link"><i className="fa fa-home"></i>Home</a></li>
-                                <li><a href="#" className="menu__link"><i className="fa fa-address-book-o"></i>About us</a></li>
-                                <li><a href="#" className="menu__link"><i className="fa fa-phone"></i>Contact</a></li>
-                            </div>
-                            <div className="divide"></div>
-                            <div className="entry">
-                                <li><a href="#openModal" className="menu__link"><i className="fa fa-user-plus"></i>Sign up</a></li>
-                                <li><a href="#openModal" className="menu__link"><i className="fa fa-user"></i>Sign in</a></li>
-                            </div>
-                            <Modal title="Authorization"/>
-                        </Fragment>
-                    }
                     </ul>
                     <MediaLinks className="nav-social" />
                 </div> 
