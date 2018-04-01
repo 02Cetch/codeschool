@@ -13,10 +13,10 @@ function App(){
     return (
       <div className="App">
           <Switch>
-            <Route path="/" component={Home} />
-            <Route path="/onlinecourses" component={OnlineCourses} />
-            <Route path="/videocourses" component={VideoCourses} />
-            <Route path="/profile" component={Profile} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/onlinecourses" component={OnlineCourses} />
+            <Route exact path="/videocourses" component={VideoCourses} />
+            <Route exact path="/profile" component={Profile} />
             <Route exact path="/onlinecourses/course/:id" render={props => (<OnlineCourse {...props}  />)} />
             <Route exact path="/videocourses/course/:id" render={props => (<VideoCourse {...props}  />)} />
           </Switch>
