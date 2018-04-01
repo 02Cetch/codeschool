@@ -28,6 +28,8 @@ export default function VideoCoursesPage(props){
                             videoCoursesDB.map( course=>
                                 <div className="col-md-6 col-sm-12" key={course.id}>
                                     <Course 
+                                        id={course.id}
+                                        coursePath="videocourses"
                                         courseColor={course.color} 
                                         courseLogo={course.logo} 
                                         courseDecr={course.descr}

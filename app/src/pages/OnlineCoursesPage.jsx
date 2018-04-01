@@ -27,6 +27,8 @@ export default function OnlineCoursesPage(props){
                         {
                             OnlineCoursesDB.map( course=>
                                 <Course 
+                                    coursePath="onlinecourses"
+                                    id={course.id}
                                     key={course.id}
                                     courseColor={course.color} 
                                     courseLogo={course.logo} 

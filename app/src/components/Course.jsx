@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Button from '../components/Button';
+
 export default function course(props){
     const courseLogoColor = {
         background: ' #'+props.courseColor
@@ -24,7 +26,7 @@ export default function course(props){
                         <p><i className="fa fa-clock-o"></i><time>{`Duration:${props.courseDuration}`}</time></p>
                     </div>
                     <div className="wrapper">
-                        <button className="button">Learn more</button>
+                        <Button className="button" to={`/${props.coursePath}/course/${props.id}`}>Learn more</Button>
                     </div>
                 </div>                            
             </div>

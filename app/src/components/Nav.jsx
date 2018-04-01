@@ -6,7 +6,7 @@ import MediaLinks from './MediaLinks';
 
 import Modal from './Modal';
 
-import {Link} from 'react-router-dom';
+import Button from './Button';
 
 export default class Nav extends Component{
     constructor(props){
@@ -60,9 +60,9 @@ export default class Nav extends Component{
                         ?
                         <Fragment>
                             <div className="mnu__links">
-                                <li><a href="#" className="menu__link"><i className="fa fa-user-o"></i>Profile</a></li>
-                                <li><a href="#" className="menu__link"><i className="fa fa-video-camera"></i>Video-Courses</a></li>
-                                <li><a href="#" className="menu__link"><i className="fa fa-graduation-cap small"></i>Online-Courses</a></li>
+                                <li><Button to="/profile" className="menu__link"><i className="fa fa-user-o"></i>Profile</Button></li>
+                                <li><Button to="/videocourses" className="menu__link"><i className="fa fa-video-camera"></i>Video-Courses</Button></li>
+                                <li><Button to="/onlinecourses" className="menu__link"><i className="fa fa-graduation-cap small"></i>Online-Courses</Button></li>
                             </div>
                             <div className="divide"></div>
                             <li><a href="#" className="menu__link"><i className="fa fa-user-times"></i>Log out</a></li>
