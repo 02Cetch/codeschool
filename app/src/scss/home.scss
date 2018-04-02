@@ -209,7 +209,7 @@ section.s{
     bottom: -100px;
     width: 200px;
     height: 60px;
-    background: rgba($accent_semiDark, .8);
+    background: $accent_semiDark;
     color: #fff;
     transition: all .5s ease;
     &.active{
