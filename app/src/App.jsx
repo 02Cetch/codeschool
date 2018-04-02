@@ -33,7 +33,6 @@ class App extends Component{
   }
   logout = () =>{
     this.setState({user: null})
-
   }
   redirected = () =>{
     this.setState({redirected: true})

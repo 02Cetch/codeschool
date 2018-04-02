@@ -2,6 +2,7 @@ import React, {Fragment, Component} from 'react';
 
 import PopupNotification from './PopupNotification';
 
+
 export default class Modal extends Component{ // чтобы использовать Модальное окно, нужно добавить в ссылку href="#openModal"
     constructor(props){
         super(props);

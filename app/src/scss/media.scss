@@ -66,6 +66,14 @@
                 display: none;
             }
     }
+    .twitch__state{
+        width: 100%;
+        .title{
+            .stream_name{
+                font-size: 25px;
+            }
+        }
+    }
 }		
 
 
@@ -127,6 +135,16 @@
                      font-size: 20px;
                  }
              }
+        }
+    }
+    .twitch__state{
+        .twitch_img{
+            width: 100px;
+        }
+        .title{
+            .stream_name{
+                font-size: 20px;
+            }
         }
     }
 }
@@ -228,6 +246,22 @@
     }
     .footer-social{
         min-width: 250px !important;
+    }
+    .twitch__state{
+        .title{
+            .stream_views{
+                font-size: 15px;
+            }
+            .stream_name{
+                font-size: 17px;
+            }
+            .stream_title{
+                font-size: 12px;
+            }
+            .status-offline{
+                font-size: 14px;
+            }
+        }
     }
 }		
 /* Custom, iPhone Retina */
