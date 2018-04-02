@@ -4,8 +4,9 @@ import $ from 'jquery';
 
 export default class PopupNotification extends Component{
     componentDidMount(){
-            var notifyElement = $(".popup").addClass('active');
-            $('.popup').prepend(notifyElement);
+            setTimeout(function(){
+                $(".popup").addClass('active');
+            }, 1000)
             setTimeout(function () {
                 $(".popup").removeClass('active');
             }, 5000);
