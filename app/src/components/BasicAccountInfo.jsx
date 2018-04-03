@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function BasicAccountInfo(props){
-    const user = props.user;
+    const user = props.user; // that's all user  info
     return(
         <div className="basic__info">
             <h3 className="h3">Basic information</h3>

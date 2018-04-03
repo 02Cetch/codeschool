@@ -15,10 +15,13 @@ import videoCoursesDB from './api/videoCoursesDB';
 import userInfo from './api/user';
 // END DATABASES
 
+// ROUTER
+import {Route, Switch} from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoutes';
+// END ROUTER
+
 import Footer from './components/Footer';
 
-import {Route, Switch} from 'react-router-dom';
 
 class App extends Component{
   constructor(props){
@@ -28,13 +31,13 @@ class App extends Component{
       redirected: false
     }
   }
-  login = user =>{
+  login = user =>{ // works if user try to log in
     this.setState({user})
   }
-  logout = () =>{
+  logout = () =>{ // works if user try to log out
     this.setState({user: null})
   }
-  redirected = () =>{
+  redirected = () =>{ // work if user try to see Private Router Pages
     this.setState({redirected: true})
     console.log('redirected')
   }

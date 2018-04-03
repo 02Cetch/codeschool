@@ -14,8 +14,8 @@ import videoCourses from '../api/videoCoursesDB';
 export default class VideoCourse extends Component{
 
     render(){
-        var {id} = this.props.match.params;
-        var item = videoCourses[id-1]
+        var {id} = this.props.match.params; // parameters from searchbar(React router match params)
+        var item = videoCourses[id-1] // item from database
         return(
             <Fragment>
                 <Nav 

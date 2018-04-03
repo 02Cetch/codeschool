@@ -7,21 +7,20 @@ export default class Learning extends Component{
         super(props);
 
         this.state={
-            status: 'OFFLINE',
-            icon: 'http://dummyimage.com/50x50/ecf0e7/5c5457.jpg&text=0x3F',
+            status: 'OFFLINE', // status of user activity(TWITCH API)
+            icon: 'http://dummyimage.com/50x50/ecf0e7/5c5457.jpg&text=0x3F', // user icon(TWITCH API)
             game: 'nostream',
-            viewers: 0,
-            result: ''
+            viewers: 0, // number of views
+            //result: ''  idk wht is ths :/
         };
     }
-    fetchData(user) { // фетчинг данных с Twitch API в компонент
+    fetchData(user) { // fetching data from Twitch API into the component
         var urlStreams = "https://wind-bow.glitch.me/twitch-api/streams/";
         var urlUsers = "https://wind-bow.glitch.me/twitch-api/users/";
 
-        fetch(`${urlStreams}${user}`)
+        fetch(`${urlStreams}${user}`) // fetching data about streams
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             if (data.stream){
               this.setState({ 
               status: "ONLINE", 
@@ -32,7 +31,7 @@ export default class Learning extends Component{
               this.setState({ status: "OFFLINE" });
             }
         })
-        fetch(`${urlUsers}${user}`)
+        fetch(`${urlUsers}${user}`) // fetching data about user account
         .then(res => res.json())
         .then(data => {
           if(data.error)
@@ -44,8 +43,7 @@ export default class Learning extends Component{
             });
         });
              
-      }
-     // end fetchData
+      }// end fetchData
     componentDidMount(){
         this.fetchData(this.props.twitchOperatorName);
      }

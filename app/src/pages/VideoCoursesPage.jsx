@@ -25,7 +25,7 @@ export default function VideoCoursesPage(props){
                 <section className="s-vcourses" id="to">
                     <div className="container">
                         {
-                            props.data.map( course=>
+                            props.data.map( course=> // uses to render data from database
                                 <div className="col-md-6 col-sm-12" key={course.id}>
                                     <Course 
                                         id={course.id}

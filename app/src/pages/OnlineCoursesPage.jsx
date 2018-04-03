@@ -25,8 +25,8 @@ export default function OnlineCoursesPage(props){
                 <section className="s-ocourses" id="to">
                     <div className="col-md-8 col-md-offset-2">
                         {
-                            props.data.map( course=>
-                                <Course 
+                            props.data.map( course=> // uses to render data from database
+                                <Course
                                     coursePath="onlinecourses"
                                     id={course.id}
                                     key={course.id}
