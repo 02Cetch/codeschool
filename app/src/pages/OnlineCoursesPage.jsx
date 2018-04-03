@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react';
+import PropTypes from 'prop-types'; // importing proptypes
 
 import Nav from '../components/Nav'
 import Header from '../components/Header';
@@ -44,3 +45,9 @@ export default function OnlineCoursesPage(props){
         </Fragment>
     );
 }
+OnlineCoursesPage.propTypes = {
+    onLogin: PropTypes.func,
+    data: PropTypes.array,
+    redirected:  PropTypes.any,
+    user: PropTypes.string
+};

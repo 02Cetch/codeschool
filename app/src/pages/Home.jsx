@@ -1,4 +1,5 @@
 import React,{Fragment, Component} from 'react';
+import PropTypes from 'prop-types'; // importing proptypes
 
 import Nav from '../components/Nav'
 import Header from '../components/Header';
@@ -32,3 +33,7 @@ export default class Home extends Component{
         );
     }
 }
+Home.propTypes = {
+	redirected:  PropTypes.any,
+    onLogin: PropTypes.func.isRequired
+};

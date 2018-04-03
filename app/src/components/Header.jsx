@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types'; // importing proptypes
 
 import MediaLinks from './MediaLinks';
 import MouseIcon from './MouseIcon';
@@ -55,3 +56,9 @@ export default class Header extends Component{
         return this.state.isHomePage ? this.returnHomeHeaderJSX() : this.returnCourseListHeaderJSX()
     }
 }
+Header.propTypes = {
+	isHomePage:  PropTypes.bool,
+    img: PropTypes.string,
+    icon: PropTypes.string,
+    bgColor: PropTypes.string
+};

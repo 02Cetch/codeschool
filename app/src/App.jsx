@@ -45,7 +45,7 @@ class App extends Component{
       return (
         <div className="App">
             <Switch>
-              <Route exact path="/" render={props => (<Home redirected = {this.state.redirected}onLogin={this.login} {...props}/>)} />
+              <Route exact path="/" render={props => (<Home redirected = {this.state.redirected} onLogin={this.login} {...props}/>)} />
               <PrivateRoute exact path="/onlinecourses" onLogout={this.logout}  data={OnlineCoursesDB} user={this.state.user}  component={OnlineCourses} redirected={this.redirected}/>
               <PrivateRoute exact path="/videocourses"  onLogout={this.logout}  data={videoCoursesDB}  user={this.state.user}  component={VideoCourses}  redirected={this.redirected}/>
               <PrivateRoute exact path="/profile"       onLogout={this.logout}  data={userInfo}        user={this.state.user}  component={Profile}       redirected={this.redirected} />

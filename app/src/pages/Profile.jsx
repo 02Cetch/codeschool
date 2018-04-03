@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react';
+import PropTypes from 'prop-types'; // importing proptypes
 
 import Header from '../components/Header';
 import Nav from '../components/Nav';
@@ -29,3 +30,8 @@ export default function Profile(props){
         </Fragment>
     );
 }
+Profile.propTypes = {
+    onLogin: PropTypes.func,
+    redirected:  PropTypes.any,
+    user: PropTypes.string
+};

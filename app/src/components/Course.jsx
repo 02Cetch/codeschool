@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types'; // importing proptypes
 
 import Button from '../components/Button';
 
 export default function course(props){
-    const courseLogoColor = {
+    const courseLogoColor = { // changing background color
         background: ' #'+props.courseColor
     }
     return(
@@ -33,3 +34,12 @@ export default function course(props){
         </div>
     );
 }
+course.propTypes = {
+    id: PropTypes.number,
+    coursePath: PropTypes.string.isRequired,
+    courseColor: PropTypes.string.isRequired,
+    courseLogo: PropTypes.string.isRequired,
+    courseDecr: PropTypes.string.isRequired,
+    courseTitle: PropTypes.string.isRequired,
+    courseDuration: PropTypes.string
+};

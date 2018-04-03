@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types'; // importing proptypes
 
 import $ from 'jquery';
 
@@ -23,3 +24,6 @@ export default class PopupNotification extends Component{
         )
     }
 }
+PopupNotification.propTypes = {
+    title: PropTypes.string
+};

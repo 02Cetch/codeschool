@@ -1,4 +1,5 @@
 import React, {Component, Fragment} from 'react';
+import PropTypes from 'prop-types'; // importing proptypes
 
 import $ from "jquery";
 
@@ -17,7 +18,7 @@ export default class Nav extends Component{
         this.toggleActive = this.toggleActive.bind(this);
     }
     componentDidMount(){
-        $(window).scroll(function() {
+        $(window).scroll(function() { // changing color of btn_rows while user scroll
            var winPos = $(window).scrollTop();
             var navPos = $('#to').offset().top;
             if (winPos >= navPos) {
@@ -83,3 +84,7 @@ export default class Nav extends Component{
         );
     }
 }
+Nav.propTypes = {
+	onLogin:  PropTypes.func,
+    img: PropTypes.string
+};

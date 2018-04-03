@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
+import PropTypes from 'prop-types'; // importing proptypes
 
-import Nav from '../components/Nav'
+import Nav from '../components/Nav';
 import Header from '../components/Header';
 import Course from '../components/Course';
 import Preloader from '../components/Preloader';
@@ -44,3 +45,9 @@ export default function VideoCoursesPage(props){
     </Fragment>
     );
 }
+VideoCoursesPage.propTypes = {
+    onLogin: PropTypes.func,
+    data: PropTypes.array,
+    redirected:  PropTypes.any,
+    user: PropTypes.string
+};
