@@ -1,6 +1,6 @@
 const user={ // локальный массив с "данными" пользователя
     id: 1,
-    name: 'Vladislav Savenkov',
+    name: 'Ivan Ivanov',
     mail: 'mymail@gmail.com',
     icon: 'avatar',
     completedCourses: [
